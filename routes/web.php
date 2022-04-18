@@ -24,3 +24,5 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get('auth/google', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index' ]);
